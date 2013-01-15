@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+{% block title %}Faraja Cancer - {{activity.name}}{% endblock title %}
+{% block content %}
+	<div class="container_12 clearfix">
+		<div id="content_wrapper">
+        	<div class="grid_12 page_title">
+            	<h1>Cancer Information</h1>
+                    <div class="page_navigation">
+                        <ul>
+                            <li><a href="#">Home</a></li>
+                            <li class="active"><a href="#">Cancer Information</a></li>
+                        </ul>
+                    </div>
+            </div>        
+            <div id="content" class="grid_9">
+                <div class="content_single">
+				<div class="post_img_single_full"> 
+					<a href="#"><img src="/static/images/cancer.jpg" width="686" height="250" alt="all browser" /></a>
+				</div>
+				
+				<div class="single_content">
+					<p>For information on all cancers and treatment options, these sites below are useful:</p>
+					<ol>
+						{% for treatment in treatments_list %}
+						<li><strong>{{treatment.institution}}<strong>{% if treatment.obs %}({{treatment.obs}}){% endif %}</li>
+						<ul>
+							<li><a href="{{treatment.link}}">{{treatment.link}}</a></li>
+						</ul>
+						{% endfor %}
+					</ol>
+					<p>For information on specific cancers, click below:</p>
+					<ul>
+					{% for specific in specific_list %}
+						<li><a href="{{specific.link}}">{{specific.name}}</a></li>	
+					{% endfor %}
+					</ul>
+				</div>
+		</div>
+          </div>
+            <div id="sidebar" class="grid_3">                
+                <div class="sidebar_wrapper">
+                	<div class="sidebar_widget">
+                    	<h4><span>Quicklinks</span></h4>
+                		<ul>
+                            <li><a href="#">Download our Brochures</a></li>
+                            <li><a href="#">Newsletter</a></li>
+                            <li><a href="#">Donate</a></li>
+                            <li><a href="#">News</a></li>
+                        </ul>
+                	</div>
+                    
+                </div>
+            </div>
+        </div>
+	</div>
+
+{% endblock content %}

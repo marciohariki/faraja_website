@@ -10,6 +10,7 @@
 <link rel="stylesheet" href="/static/css/skin1.css" />
 <link rel="stylesheet" href="/static/css/nivo-slider.css" />
 <link rel="stylesheet" href="/static/css/jqueryslidemenu.css" />
+<link rel="stylesheet" href="/static/css/flexslider.css" />
 <!--[if IE]>
 	<link rel="stylesheet" type="text/css" media="all" href="/static/css/ie.css"/>
     <script type="text/javascript" src="/static/javascript/media-queries-ie.js"></script>
@@ -19,8 +20,11 @@
 <script type="text/javascript" src="/static/javascript/jquery.nivo.slider.js"></script>
 <script type="text/javascript" src="/static/javascript/jquery.bxSlider.min.js"></script>
 <script type="text/javascript" src="/static/javascript/jquery.elastislide.js"></script>
-<script type="text/javascript" src="/static/javascript/custom.js"></script>
 <script type="text/javascript" src="/static/javascript/scrolltop.js"></script>
+<script type="text/javascript" src="/static/javascript/jquery.toggleElements.pack.js"></script>
+<script type="text/javascript" src="/static/javascript/jquery.flexslider.js"></script>
+<script type="text/javascript" src="/static/javascript/jquery.tools.min.js"></script>
+<script type="text/javascript" src="/static/javascript/custom.js"></script>
 
     {% block extrahead %}
     {% endblock extrahead %}
@@ -37,7 +41,7 @@
 			</div>
 			<div class="top_navigation_social">
 				<p>Follow us</p>
-					<ul>
+					<ul class="social_media">
 						<li class="social_facebook">
 							<a href="#">Facebook</a>
 						</li>
@@ -68,22 +72,22 @@
 		<div class="grid_12"><!-- Start Menu -->
 			<div id="topnav" class="jqueryslidemenu">
 				<ul>
-					<li><a href="">Home</a></li>
-					<li><a class="navEffect" href="#">Who we are</a>
+					<li><a href="/">Home</a></li>
+					<li><a class="navEffect" href="/who_we_are">Who we are</a>
 						<ul>
-							<li><a href="#">Trustees Info</a></li>
+							<li><a href="/trustees">Trustees Info</a></li>
 						</ul>
 					</li>
-					<li><a class="navEffect" href="#">What we do</a>
+					<li><a class="navEffect" href="/what_we_do">What we do</a>
 						<ul>
-							<li><a href="#">Therapists</a></li>
+							<li><a href="/therapists">Therapists</a></li>
 						</ul>
 					</li>
-					<li><a href="">Get Involved</a></li>
-					<li><a href="">Cancer Information</a></li>
-					<li><a href="">Testimonials</a></li>
-					<li><a href="">FAQ</a></li>
-					<li><a href="contacts.html">Contact us</a></li>
+					<li><a href="/involved">Get Involved</a></li>
+					<li><a href="/cancer">Cancer Information</a></li>
+					<li><a href="/testimonials">Testimonials</a></li>
+					<li><a href="/faq">FAQ</a></li>
+					<li><a href="/contact_us">Contact us</a></li>
 				</ul>
 			</div>
 		</div><!-- end menu -->        	
@@ -94,8 +98,8 @@
 	<div id="footer_wrapper">
 		<div class="container_12 clearfix">
 			<div id="footer">
-				<div class="copyright_left">&reg; Copyright 2012 Medicals Theme</div>
-				<div class="copyright_right">Powered by <a href="http://www.thunderthemes.net">ThunderThemes.net</a></div>
+				<div class="copyright_left">&reg; Copyright 2012 Faraja Cancer Support</div>
+				<div class="copyright_right">Powered by <a href="http://www.thunderthemes.net">Márcio Hariki</a></div>
 			</div>
 		</div>
 	</div>

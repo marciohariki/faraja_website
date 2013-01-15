@@ -34,3 +34,49 @@ import django.utils.simplejson as json
 
 def index(request):
     return render_to_response('index.html',locals(), context_instance=RequestContext(request))
+
+def who_we_are(request):
+    text_list = WhoWeAre.objects.all()
+    text = text_list[0]
+    return render_to_response('who_we_are.html',locals(), context_instance=RequestContext(request))
+
+def trustees(request):
+    trustee_list = Trustee.objects.all()
+    return render_to_response('trustees.html',locals(), context_instance=RequestContext(request))
+
+def what_we_do(request):
+    text_list = WhatWeDo.objects.all()
+    text = text_list[0]
+    activities_list = WhatWeDoActivity.objects.all()
+    return render_to_response('what_we_do.html',locals(), context_instance=RequestContext(request))
+
+def activity(request, id_activity):
+    activity = WhatWeDoActivity.objects.get(id=id_activity)
+    return render_to_response('activity.html',locals(), context_instance=RequestContext(request))
+
+def therapists(request):
+    therapists_list = Therapist.objects.all()
+    return render_to_response('therapists.html',locals(), context_instance=RequestContext(request))
+
+def involved(request):
+    involved_list = Involved.objects.all()
+    return render_to_response('involved.html',locals(), context_instance=RequestContext(request))
+
+def cancer(request):
+    treatments_list = CancerTreatment.objects.all()
+    specific_list = CancerSpecific.objects.all()
+    return render_to_response('cancer.html',locals(), context_instance=RequestContext(request))
+
+def testimonials(request):
+    testimonials_list = Testimonial.objects.all()
+    return render_to_response('testimonials.html',locals(), context_instance=RequestContext(request))
+
+def faq(request):
+    faq_list = FAQ.objects.all()
+    return render_to_response('faq.html',locals(), context_instance=RequestContext(request))
+
+def contact_us(request):
+    return render_to_response('contact_us.html',locals(), context_instance=RequestContext(request))
+
+def donate(request):
+    return render_to_response('donate.html',locals(), context_instance=RequestContext(request))

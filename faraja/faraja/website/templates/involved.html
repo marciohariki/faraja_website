@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+{% block title %}Faraja Cancer - Get Involved{% endblock title %}
+{% block content %}
+	<div class="container_12 clearfix">
+		<div id="content_wrapper">
+        	<div class="grid_12 page_title">
+            	<h1>Get Involved</h1>
+                    <div class="page_navigation">
+                        <ul>
+                            <li><a href="#">Home</a></li>
+                            <li class="active"><a href="#">Get Involved</a></li>
+                        </ul>
+                    </div>
+            </div>        
+            <div id="content" class="grid_9">
+                <div class="content_single">
+			<div class="post_img_single_full"> 
+				<a href="#"><img src="/static/images/involved.jpg" width="686" height="250" alt="all browser" /></a>
+			</div>
+		
+			<div class="single_content">
+				{% autoescape off %}
+				<p>At Faraja, our aim is to support anyone affected by Cancer – be it patients, carers or other like-minded support groups. In order to offer this support, we need all the help we can get, so whether you’re an individual, a business, a therapist or a member of the medical community, you can help make a difference at Faraja.</p>
+				{% for involved in involved_list %}
+				<h1>{{involved.name}}</h1>
+				{{involved.text}}
+				{% if involved.email or involved.phone %}
+				<p>To find out more about being a desk volunteer, </p>
+					{% if involved.phone %}
+					<p>please call us on: {{involved.phone}} </p>
+					{% endif %}
+					{% if involved.email %}
+					<p>email us at <a href="mailto:{{involved.email}}">{{involved.email}}</a></p>
+					{% endif %}
+				{% endif %}
+				{% endfor %}
+				{% endautoescape %}
+			</div>
+		</div>
+          </div>
+            <div id="sidebar" class="grid_3">                
+                <div class="sidebar_wrapper">
+                	<div class="sidebar_widget">
+                    	<h4><span>Quicklinks</span></h4>
+                		<ul>
+                            <li><a href="#">Download our Brochures</a></li>
+                            <li><a href="#">Newsletter</a></li>
+                            <li><a href="/donate">Donate</a></li>
+                            <li><a href="#">News</a></li>
+                        </ul>
+                	</div>
+                    
+                </div>
+            </div>
+        </div>
+	</div>
+
+{% endblock content %}

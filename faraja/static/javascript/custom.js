@@ -42,5 +42,18 @@ $(function() {
 
 // Start Nivoslider
 $(window).load(function() {
-        $('#slider').nivoSlider();
+        $('.flexslider').flexslider({
+        animation: "slide",
+		controlNav: false,
+		directionNav: true, 
+        
+        start: function(slider){
+          $('body').removeClass('loading');
+        }
+      });
+	$(".block_accordion").tabs(".block_accordion .content", {
+		tabs : '.button_outer',
+		effect : 'slide',
+		initialIndex : 0
+	});
 });

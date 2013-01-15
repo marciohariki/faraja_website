@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% block title %}Faraja Cancer - Who we are{% endblock title %}
+{% block content %}
+	<div class="container_12 clearfix">
+		<div id="content_wrapper">
+        	<div class="grid_12 page_title">
+            	<h1>Who we are</h1>
+                    <div class="page_navigation">
+                        <ul>
+                            <li><a href="#">Home</a></li>
+                            <li class="active"><a href="#">Who we are</a></li>
+                        </ul>
+                    </div>
+            </div>        
+            <div id="content" class="grid_9">
+                <div class="content_single">
+				<div class="post_img_single_full"> 
+					<a href="#"><img src="/static/images/who1.jpg" width="686" height="250" alt="all browser" /></a>
+				</div>
+                        
+				<div class="single_content">
+					{% autoescape off %}
+					{{text.text}}
+					{% endautoescape %}
+					<p><a href="/trustees">Please click here to read about Faraja’s Trustees</a></p>
+                        </div>
+		</div>
+          </div>
+            <div id="sidebar" class="grid_3">                
+                <div class="sidebar_wrapper">
+                	<div class="sidebar_widget">
+                    	<h4><span>Quicklinks</span></h4>
+                		<ul>
+                            <li><a href="#">Download our Brochures</a></li>
+                            <li><a href="#">Newsletter</a></li>
+                            <li><a href="/donate">Donate</a></li>
+                            <li><a href="#">News</a></li>
+                        </ul>
+                	</div>
+                    
+                </div>
+            </div>
+        </div>
+	</div>
+
+{% endblock content %}

@@ -65,6 +65,7 @@ STATIC_URL = '/static/'
 # Additional locations of static files
 STATICFILES_DIRS = (
     'C:/Users/Hariki/Documents/GitHub/faraja_website/faraja/static',
+    'C:/Users/Hariki/Documents/GitHub/faraja_website/faraja/files',
     # Put strings here, like "/home/html/static" or "C:/www/django/static".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
@@ -112,6 +113,7 @@ TEMPLATE_DIRS = (
 
 INSTALLED_APPS = (
     'faraja.website',
+    'tinymce',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',

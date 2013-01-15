@@ -341,13 +341,13 @@ table.standard-table tr:hover td {
 
 .search_wrapper #search-text input[type="text"] {
     background-color: #FFFFFF !important;
-    border-color: #E3E3E3 !important;
+    border-color: #B7B7B7 !important;
     color: #B7B7B7 !important;
 }
 
 .search_wrapper #search-text input[type="text"] {
     background-color: #fafafa !important;
-    border-color: #f5f5f5 !important;
+    border-color: #B7B7B7 !important;
     color: #B7B7B7 !important;
 }
 .search_wrapper input[type="text"] {
@@ -1245,7 +1245,7 @@ a.article_archive {
 }
 #comments input[type="text"], input[type="url"], input[type="email"], input[type="password"], textarea, select {
     background-color: #FBFBFB;
-    border-color: #EEEEEE;
+    border-color: #B7B7B7;
     border-style: solid;
     border-width: 1px;
     color: #999999;

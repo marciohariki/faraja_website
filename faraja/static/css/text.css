@@ -73,7 +73,7 @@ ul {
 li {
   margin-left: 30px;
 }
-.social_media li{
+.social_media li, .slides li{
 	margin-left: 0px !important;
 }
 ul li a:hover {

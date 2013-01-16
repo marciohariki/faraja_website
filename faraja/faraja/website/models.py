@@ -75,4 +75,13 @@ class FAQ(models.Model):
     answer = models.TextField()
     
     def __unicode__(self):
-        return self.question    
+        return self.question
+    
+
+class MainNews(models.Model):
+    order = models.IntegerField()
+    text = models.CharField(max_length=256)
+    picture = models.FileField(upload_to='files')
+    
+    def __unicode__(self):
+        return self.text

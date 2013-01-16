@@ -33,6 +33,7 @@ from django.core import serializers
 import django.utils.simplejson as json
 
 def index(request):
+    news_list = MainNews.objects.all().order_by('order')
     return render_to_response('index.html',locals(), context_instance=RequestContext(request))
 
 def who_we_are(request):

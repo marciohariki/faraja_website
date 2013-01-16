@@ -633,14 +633,13 @@ div.twitter-shortcode-wrapper {
     background-color: #F8BF56;
 }
 .button.blue {
-    background-image: -moz-linear-gradient(center top , #B5E0F7 0%, #76C7F1 100%);
     border: 1px solid #1172C1;
     color: #1172C1 !important;
 }
 .button.blue:hover {
-    background-image: -moz-linear-gradient(center top , #76C7F1 0%, #B5E0F7 100%);
     border: 1px solid #1172C1;
-    color: #1172C1 !important;
+    background-color: #1172C1;
+    color: white !important;
 }
 .no-cssgradients .button.blue {
     background-color: #B5E0F7;

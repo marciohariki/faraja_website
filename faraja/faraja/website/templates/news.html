@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+{% block title %}Faraja Cancer - News{% endblock title %}
+{% block content %}
+<div class="container_12 clearfix">
+	<div id="content_wrapper">
+        	<div class="grid_12 page_title">
+			<h1>Faraja News <!--<span class="subtitle">This is Category Description</span>--></h1>
+			<div class="page_navigation">
+				<ul>
+				<li><a href="#">Home</a></li>
+				<li class="active"><a href="#">News</a></li>
+			    </ul>
+			</div>
+		</div>        
+		<div id="content" class="grid_9">
+			
+			{% autoescape off %}
+				{% for news in news_list %}
+					<div class="content_inner divider">
+						<div class="date-wrapper">
+							<div class="date-value">{{news.date.day}}</div>
+							<div class="month-value">{{news.date|date:"M"}}</div>
+							<div class="year-value">{{news.date|date:"Y"}}</div>
+						</div>
+						<div class="post_img_archive"> 
+							<a href="#"><img src="/static/{{news.thumbnail|cut:"files/"}}" width="100" height="100" alt="all browser" /></a>
+						</div>                    
+						<div class="title">
+								<h3><a href="/detail_news/{{news.id}}">{{news.title}}</a></h3>
+								<p>{{news.text_preview}}<a class="article_archive" href="/detail_news/{{news.id}}">Continue reading</a></p>
+						</div>
+					</div>
+				{% endfor %}
+			{% endautoescape %}
+                </div> <!-- End articles -->
+                <div id="pager">
+                	<a class="prev" href="#">« Previous</a>
+                    <span class="current">1</span>
+                    <a href="#">2</a>
+                    <a class="next" href="#">Next »</a>
+                </div>                
+                <div id="sidebar" class="grid_3">                
+                <div class="sidebar_wrapper">
+                	<div class="sidebar_widget">
+                    	<h4><span>Quicklinks</span></h4>
+                		<ul>
+                            <li><a href="#">Download our Brochures</a></li>
+                            <li><a href="#">Newsletter</a></li>
+                            <li><a href="/donate">Donate</a></li>
+                            <li><a href="/news">News</a></li>
+                        </ul>
+                	</div>
+                    
+                </div>
+            </div>                 
+        </div>
+</div>
+
+{% endblock content %}

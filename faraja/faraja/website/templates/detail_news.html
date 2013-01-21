@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+{% block title %}Faraja Cancer - {{activity.name}}{% endblock title %}
+{% block content %}
+	<div class="container_12 clearfix">
+		<div id="content_wrapper">
+        	<div class="grid_12 page_title">
+            	<h1>{{news.title}}</span></h1>
+                    <div class="page_navigation">
+                        <ul>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">News</a></li>
+                            <li class="active"><a href="#">{{news.title}}</a></li>
+                        </ul>
+                    </div>
+            </div>        
+            <div id="content" class="grid_9">
+                <div class="content_single">
+					<div class="post_img_single_full"> 
+                    	<a href="#"><img src="/static/{{news.picture|cut:"files/"}}" width="686" height="250" alt="all browser" /></a>
+                	</div>
+                        <div class="module_title_meta">
+				<div class="meta_text">
+					<span class="data"><img src="images/date_icon.png" width="16" height="16" alt="date" />{{news.date|date:"F d, Y"}}</span>
+                        	</div>
+                        </div>
+                        <div class="single_content">
+				{% autoescape off %}
+					{{news.text}}
+				{% endautoescape %}
+                        </div>
+                </div>
+                 <!-- End articles -->
+                                 
+          </div>
+            <div id="sidebar" class="grid_3">                
+                <div class="sidebar_wrapper">
+                	<div class="sidebar_widget">
+                    	<h4><span>Quicklinks</span></h4>
+                		<ul>
+                            <li><a href="#">Download our Brochures</a></li>
+                            <li><a href="#">Newsletter</a></li>
+                            <li><a href="/donate">Donate</a></li>
+                            <li><a href="/news">News</a></li>
+                        </ul>
+                	</div>
+                    
+                </div>
+            </div>
+        </div>
+	</div>
+
+{% endblock content %}

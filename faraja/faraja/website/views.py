@@ -81,3 +81,11 @@ def contact_us(request):
 
 def donate(request):
     return render_to_response('donate.html',locals(), context_instance=RequestContext(request))
+
+def news(request):
+    news_list = News.objects.all().order_by('date')
+    return render_to_response('news.html',locals(), context_instance=RequestContext(request))
+
+def detail_news(request, id_news):
+    news = News.objects.get(id=id_news)
+    return render_to_response('detail_news.html',locals(), context_instance=RequestContext(request))

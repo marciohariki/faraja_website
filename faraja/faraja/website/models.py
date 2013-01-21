@@ -85,3 +85,14 @@ class MainNews(models.Model):
     
     def __unicode__(self):
         return self.text
+    
+class News(models.Model):
+    date = models.DateField(auto_now=True)
+    title = models.CharField(max_length=256)
+    text_preview = models.TextField()
+    text = models.TextField()
+    thumbnail = models.FileField(upload_to='files')
+    picture = models.FileField(upload_to='files')
+    
+    def __unicode__(self):
+        return "{0}/{1}/{2} - {3}".format(self.date.day, self.date.month, self.date.year, self.title)

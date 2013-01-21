@@ -18,6 +18,8 @@ urlpatterns = patterns('',
     url(r'^faq$', 'faraja.website.views.faq', name='faq'),
     url(r'^contact_us$', 'faraja.website.views.contact_us', name='contact_us'),
     url(r'^donate$', 'faraja.website.views.donate', name='donate'),
+    url(r'^news$', 'faraja.website.views.news', name='news'),
+    url(r'^detail_news/(?P<id_news>[0-9]+)/$', 'faraja.website.views.detail_news', name='detail_news'),
     
     #Widgets
     url(r'^tinymce/', include('tinymce.urls')),

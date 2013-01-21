@@ -43,6 +43,11 @@ class FAQAdmin(admin.ModelAdmin):
     formfield_overrides = {
         models.TextField: {'widget': TinyMCE(attrs={'cols': 80, 'rows': 30})},
     }
+
+class NewsAdmin(admin.ModelAdmin):    
+    formfield_overrides = {
+        models.TextField: {'widget': TinyMCE(attrs={'cols': 80, 'rows': 30})},
+    }
     
 admin.site.register(WhatWeDo, WhatWeDoAdmin)
 admin.site.register(WhatWeDoActivity, WhatWeDoActivityAdmin)
@@ -52,6 +57,7 @@ admin.site.register(Trustee, TrusteeAdmin)
 admin.site.register(Involved, InvolvedAdmin)
 admin.site.register(Testimonial, TestimonialAdmin)
 admin.site.register(FAQ, FAQAdmin)
+admin.site.register(News, NewsAdmin)
 admin.site.register(CancerTreatment)
 admin.site.register(CancerSpecific)
 admin.site.register(MainNews)
